@@ -1,16 +1,10 @@
-# madrassti
+## Madrassti (مدرستي)
+A Flutter-based app designed to enhance online education for schools. It features virtual classrooms, resource sharing, student performance tracking, and parent-teacher communication tools. Tailored for Arabic-speaking users, it provides an accessible, interactive, and efficient platform for modern learning.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Alt text](https://github.com/LogainHamdan/Madrassti/blob/9cf32556f05181237c5421fff1b2f875e31a842e/Screenshot_2024-12-23-13-52-29-970_com.example.madrassti.jpg)
+![Alt text](https://github.com/LogainHamdan/Madrassti/blob/9cf32556f05181237c5421fff1b2f875e31a842e/Screenshot_2024-12-23-13-52-45-373_com.example.madrassti.jpg)
+![Alt text](https://github.com/LogainHamdan/Madrassti/blob/9cf32556f05181237c5421fff1b2f875e31a842e/Screenshot_2024-12-23-13-53-05-000_com.example.madrassti.jpg)
+![Alt text](https://github.com/LogainHamdan/Madrassti/blob/9cf32556f05181237c5421fff1b2f875e31a842e/Screenshot_2024-12-23-13-53-10-514_com.example.madrassti.jpg)
+![Alt text](https://github.com/LogainHamdan/Madrassti/blob/9cf32556f05181237c5421fff1b2f875e31a842e/Screenshot_2024-12-23-13-53-17-272_com.example.madrassti.jpg)
+![Alt text](https://github.com/LogainHamdan/Madrassti/blob/9cf32556f05181237c5421fff1b2f875e31a842e/Screenshot_2024-12-23-13-53-30-361_com.example.madrassti.jpg)
+![Alt text](https://github.com/LogainHamdan/Madrassti/blob/9cf32556f05181237c5421fff1b2f875e31a842e/Screenshot_2024-12-23-13-53-38-835_com.example.madrassti.jpg)
