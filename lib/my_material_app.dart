@@ -1,4 +1,5 @@
 import 'package:finalproject/screens/apointments.dart';
+import 'package:finalproject/screens/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -41,7 +42,7 @@ class MyMaterialApp extends StatelessWidget {
             scaffoldBackgroundColor: const Color(0xffF7F6FF),
             colorScheme: ColorScheme.fromSeed(seedColor: kprimaryColor),
           ),
-          initialRoute: OnboardingScreen.id, // Define the starting route
+          initialRoute: Profile.id, // Define the starting route
           routes: {
             OnboardingScreen.id: (context) => const OnboardingScreen(),
             AppointmentsPage.id: (context) => const AppointmentsPage(),
@@ -51,6 +52,7 @@ class MyMaterialApp extends StatelessWidget {
             Register.id: (context) => const Register(selectedTab: 0),
             ForgotPassScreen.id: (context) => const ForgotPassScreen(),
             Chats.id: (context) => const Chats(),
+            Profile.id: (context) => const Profile(),
           },
         );
       },
