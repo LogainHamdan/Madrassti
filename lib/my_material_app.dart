@@ -1,10 +1,15 @@
-import 'package:easy_localization/easy_localization.dart';
+import 'package:finalproject/screens/apointments.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'core/util/constants.dart';
+import 'screens/chats.dart';
+import 'screens/forgot-password.dart';
+import 'screens/home.dart';
 import 'screens/onboarding-welcome.dart';
+import 'screens/join.dart';
+import 'screens/register.dart';
+import 'screens/login.dart';
+import 'core/util/constants.dart';
 
 class MyMaterialApp extends StatelessWidget {
   const MyMaterialApp({super.key});
@@ -12,34 +17,43 @@ class MyMaterialApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360, 690),
+      designSize: const Size(375, 812), // Your design's screen size
       minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (_, child) {
+      builder: (ctx, _) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          localizationsDelegates: context.localizationDelegates,
-          supportedLocales: context.supportedLocales,
-          locale: Locale('en'),
-          title: 'Madrassti',
+          title: 'مدرستي',
           theme: ThemeData(
-            fontFamily: 'Poppins',
+            fontFamily: 'rubik',
             iconTheme: const IconThemeData(color: Color(0xffB2B2B2)),
             textTheme: TextTheme(
-                bodySmall: GoogleFonts.poppins(
-                    color: const Color(0xffB2B2B2), fontSize: 12),
-                bodyMedium: GoogleFonts.poppins(
-                    color: const Color(0xff272727), fontSize: 18)),
+              bodySmall: TextStyle(
+                  color: const Color(0xffB2B2B2),
+                  fontSize: 12,
+                  fontFamily: 'rubik'),
+              bodyMedium: TextStyle(
+                fontFamily: 'rubik',
+                color: const Color(0xff272727),
+                fontSize: 18,
+              ),
+            ),
             appBarTheme: const AppBarTheme(backgroundColor: Color(0xffF7F6FF)),
             scaffoldBackgroundColor: const Color(0xffF7F6FF),
             colorScheme: ColorScheme.fromSeed(seedColor: kprimaryColor),
-            // useMaterial3: true,
           ),
-          home: const OnboardingScreen(),
-          routes: {},
+          initialRoute: OnboardingScreen.id, // Define the starting route
+          routes: {
+            OnboardingScreen.id: (context) => const OnboardingScreen(),
+            AppointmentsPage.id: (context) => const AppointmentsPage(),
+            HomePage.id: (context) => const HomePage(),
+            JoinScreen.id: (context) => const JoinScreen(),
+            Login.id: (context) => const Login(selectedTab: 1),
+            Register.id: (context) => const Register(selectedTab: 0),
+            ForgotPassScreen.id: (context) => const ForgotPassScreen(),
+            Chats.id: (context) => const Chats(),
+          },
         );
       },
-      child: OnboardingScreen(),
     );
   }
 }

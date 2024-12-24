@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 
 // colors
-Color kprimaryColor = const Color(0xff003AFC);
+Color kprimaryColor = Colors.blue;
+Color textColor = const Color(0xFF303483);
 Color kgrdiantC1 = const Color(0xff6589FF);
 Color kgrdiantC2 = const Color(0xff003AFC); // same the primary color
 Color ksecondaryColor = const Color(0xff7C7C7C);
 Color kinBoxStatus = const Color(0xffFA3A57);
+Color orangeColor = const Color(0xffff5f2e);
 Color kpendingStatus = const Color(0xffFFE120);
 Color kinProgressStatus = const Color(0xff6589FF);
 Color kcompletedStatus = const Color(0xff77D16F);
 Color ktitleBlack = const Color(0xff272727);
 Color kiconColor = const Color(0xffB2B2B2);
+Color kicon2Color = const Color(0xb5ffffff);
 Color kborderColor = const Color(0xffEAEAF5);
 Color kshadowColor = const Color(0xffCDCCF1);
 Color ktagBackground = const Color(0xffE6E6E6);
