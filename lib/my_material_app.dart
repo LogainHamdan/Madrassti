@@ -1,4 +1,5 @@
 import 'package:finalproject/screens/apointments.dart';
+import 'package:finalproject/screens/community.dart';
 import 'package:finalproject/screens/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -52,6 +53,7 @@ class MyMaterialApp extends StatelessWidget {
             Register.id: (context) => const Register(selectedTab: 0),
             ForgotPassScreen.id: (context) => const ForgotPassScreen(),
             Chats.id: (context) => const Chats(),
+            Community.id: (context) => Community(),
             Profile.id: (context) => const Profile(),
           },
         );

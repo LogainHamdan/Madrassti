@@ -67,7 +67,7 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
                           IconButton(
                               onPressed: () {},
                               icon: Icon(
-                                Icons.menu,
+                                Icons.more_vert,
                                 color: Colors.grey,
                                 size: 20.sp,
                               )),
