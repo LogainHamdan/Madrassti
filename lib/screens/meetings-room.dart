@@ -60,7 +60,7 @@ class MeetingsRoomScreen extends StatelessWidget {
                     bottomPadding: 0,
                     title: 'أنشئ/انضم لاجتماع',
                     imagePath: 'assets/images/educational_platform.png',
-                    onTap: () {})
+                    onTap: () {}),
               ],
             )
           ],

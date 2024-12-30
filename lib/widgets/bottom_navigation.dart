@@ -1,5 +1,6 @@
 import 'package:finalproject/screens/apointments.dart';
 import 'package:finalproject/screens/community.dart';
+import 'package:finalproject/screens/meetings-room.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -35,7 +36,7 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
           boxShadow: [
             BoxShadow(
               // color: Colors.black.withOpacity(0.2),
-              //
+
               color: Colors.black.withOpacity(0.2),
               offset: Offset(0.0, 0.1),
               blurRadius: 8.0.r,
@@ -49,10 +50,9 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
           child: BottomNavigationBar(
             backgroundColor: Colors.white,
             unselectedLabelStyle: TextStyle(
-                fontFamily: 'rubik',
-                fontWeight: FontWeight.bold,
-                fontSize: 16.sp),
+                color: textColor, fontFamily: 'rubik', fontSize: 16.sp),
             selectedLabelStyle: TextStyle(
+                color: textColor,
                 fontFamily: 'rubik',
                 fontWeight: FontWeight.bold,
                 fontSize: 16.sp),
@@ -79,8 +79,8 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
                   break;
               }
             },
-            selectedItemColor: kprimaryColor,
-            unselectedItemColor: Colors.grey,
+            selectedItemColor: orangeColor,
+            unselectedItemColor: kprimaryColor,
             type: BottomNavigationBarType.fixed,
             items: [
               BottomNavigationBarItem(
@@ -117,5 +117,6 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
       Navigator.pushReplacementNamed(context, AppointmentsPage.id);
 
   void _navigateToMeetings(BuildContext context) =>
-      Navigator.pushReplacementNamed(context, AppointmentsPage.id);
+      Navigator.pushReplacementNamed(context, MeetingsRoomScreen.id);
 }
+// void _navigateToMeetings(BuildContext context)=> Navigator.pushReplacementNamed(context, HomePage.id);}
