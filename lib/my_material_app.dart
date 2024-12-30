@@ -1,5 +1,6 @@
 import 'package:finalproject/screens/apointments.dart';
 import 'package:finalproject/screens/community.dart';
+import 'package:finalproject/screens/meetings-room.dart';
 import 'package:finalproject/screens/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -43,7 +44,7 @@ class MyMaterialApp extends StatelessWidget {
             scaffoldBackgroundColor: const Color(0xffF7F6FF),
             colorScheme: ColorScheme.fromSeed(seedColor: kprimaryColor),
           ),
-          initialRoute: HomePage.id,
+          initialRoute: MeetingsRoomScreen.id,
           routes: {
             OnboardingScreen.id: (context) => const OnboardingScreen(),
             AppointmentsPage.id: (context) => const AppointmentsPage(),
@@ -55,6 +56,7 @@ class MyMaterialApp extends StatelessWidget {
             Chats.id: (context) => const Chats(),
             Community.id: (context) => Community(),
             Profile.id: (context) => const Profile(),
+            MeetingsRoomScreen.id: (context) => MeetingsRoomScreen(),
           },
         );
       },

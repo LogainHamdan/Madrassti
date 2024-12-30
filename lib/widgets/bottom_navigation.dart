@@ -21,6 +21,7 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
   @override
   Widget build(BuildContext context) {
     final navigationProvider = Provider.of<NavigationProvider>(context);
+
     return ScreenUtilInit(
       child: Container(
         width: MediaQuery.sizeOf(context).width.w,
@@ -33,6 +34,8 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
           ),
           boxShadow: [
             BoxShadow(
+              // color: Colors.black.withOpacity(0.2),
+              //
               color: Colors.black.withOpacity(0.2),
               offset: Offset(0.0, 0.1),
               blurRadius: 8.0.r,

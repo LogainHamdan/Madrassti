@@ -158,6 +158,7 @@ class HomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           CustomStack(
+                            bottomPadding: 20,
                             onTap: () => Navigator.pushReplacementNamed(
                                 context, Community.id),
                             title: 'المجتمع',
@@ -167,6 +168,7 @@ class HomePage extends StatelessWidget {
                             width: 8,
                           ),
                           CustomStack(
+                            bottomPadding: 20,
                             onTap: () => Navigator.pushReplacementNamed(
                                 context, AppointmentsPage.id),
                             title: 'قاعة الاجتماعات',
@@ -182,6 +184,7 @@ class HomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           CustomStack(
+                            bottomPadding: 20,
                             onTap: () => Navigator.pushReplacementNamed(
                                 context, AppointmentsPage.id),
                             imagePath: 'assets/images/virtual classes.png',
@@ -192,6 +195,7 @@ class HomePage extends StatelessWidget {
                           ),
                           // CustomStack no longer requires parameters
                           CustomStack(
+                            bottomPadding: 20,
                             onTap: () => Navigator.pushReplacementNamed(
                                 context, AppointmentsPage.id),
                             title: 'الصفوف الافتراضية',

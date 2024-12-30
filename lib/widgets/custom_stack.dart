@@ -5,11 +5,13 @@ class CustomStack extends StatelessWidget {
   final String title;
   final String imagePath;
   final Function() onTap;
+  final double bottomPadding;
   const CustomStack({
     Key? key,
     required this.title,
     required this.imagePath,
     required this.onTap,
+    required this.bottomPadding,
   }) : super(key: key);
 
   @override
@@ -19,7 +21,7 @@ class CustomStack extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            height: 150.h,
+            height: 200.h,
             width: 150.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20.r),
@@ -35,7 +37,8 @@ class CustomStack extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 8.sp, right: 8.sp, bottom: 20.sp),
+            padding: EdgeInsets.only(
+                left: 8.sp, right: 8.sp, bottom: bottomPadding.sp),
             child: Column(
               children: [
                 Image.asset(
