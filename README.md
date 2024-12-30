@@ -11,5 +11,8 @@ A Flutter-based app designed to enhance online education for schools. It feature
 ![Alt text](https://github.com/LogainHamdan/Madrassti/blob/9cf32556f05181237c5421fff1b2f875e31a842e/Screenshot_2024-12-23-13-53-38-835_com.example.madrassti.jpg)
 ![Alt text](https://github.com/LogainHamdan/Madrassti/blob/92e0508bd06159723c38b0d13f453f931bc443ab/Screenshot_2024-12-24-13-04-42-004_com.example.madrassti.jpg)
 ![Alt text](https://github.com/LogainHamdan/Madrassti/blob/92e0508bd06159723c38b0d13f453f931bc443ab/Screenshot_2024-12-24-13-04-44-615_com.example.madrassti.jpg)
+<<<<<<< HEAD
 ![Alt text](https://github.com/LogainHamdan/Madrassti/blob/f9c695cd1dfe7a8f0c3742937df10ac1a85ad3b8/Screenshot_2024-12-25-12-23-47-554_com.example.madrassti.jpg)
 ![Alt text](https://github.com/LogainHamdan/Madrassti/blob/f9c695cd1dfe7a8f0c3742937df10ac1a85ad3b8/Screenshot_2024-12-25-12-24-35-085_com.example.madrassti.jpg)
+=======
+>>>>>>> f9c695cd1dfe7a8f0c3742937df10ac1a85ad3b8

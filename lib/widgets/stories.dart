@@ -31,7 +31,7 @@ class HorizontalStories extends StatelessWidget {
                     ),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.all(4.w), // Ensures the image fits well
+                    padding: EdgeInsets.all(3.w), // Ensures the image fits well
                     child: ClipOval(
                       child: Image.asset(
                         storyImages[index],

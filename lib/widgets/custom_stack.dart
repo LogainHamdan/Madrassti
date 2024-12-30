@@ -35,19 +35,17 @@ class CustomStack extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 8.sp, right: 8.sp),
+            padding: EdgeInsets.only(left: 8.sp, right: 8.sp, bottom: 20.sp),
             child: Column(
               children: [
-                Center(
-                  child: Image.asset(
-                    imagePath,
-                    height: 120.h,
-                    width: 120.w,
-                  ),
+                Image.asset(
+                  imagePath,
+                  height: 120.h,
+                  width: 120.w,
+                  fit: BoxFit.scaleDown,
                 ),
                 Text(
                   title,
-                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontFamily: 'rubik',

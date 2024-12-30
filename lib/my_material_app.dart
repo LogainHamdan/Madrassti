@@ -31,7 +31,7 @@ class MyMaterialApp extends StatelessWidget {
             textTheme: TextTheme(
               bodySmall: TextStyle(
                   color: const Color(0xffB2B2B2),
-                  fontSize: 12,
+                  fontSize: 12.sp,
                   fontFamily: 'rubik'),
               bodyMedium: TextStyle(
                 fontFamily: 'rubik',
@@ -43,7 +43,7 @@ class MyMaterialApp extends StatelessWidget {
             scaffoldBackgroundColor: const Color(0xffF7F6FF),
             colorScheme: ColorScheme.fromSeed(seedColor: kprimaryColor),
           ),
-          initialRoute: Profile.id, // Define the starting route
+          initialRoute: HomePage.id,
           routes: {
             OnboardingScreen.id: (context) => const OnboardingScreen(),
             AppointmentsPage.id: (context) => const AppointmentsPage(),

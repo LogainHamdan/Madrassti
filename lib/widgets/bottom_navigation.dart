@@ -1,4 +1,5 @@
 import 'package:finalproject/screens/apointments.dart';
+import 'package:finalproject/screens/community.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -6,7 +7,17 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../core/util/constants.dart';
 import '../providers/bottom_nav.dart';
 
-class BottomNavigationBarCustom extends StatelessWidget {
+class BottomNavigationBarCustom extends StatefulWidget {
+  const BottomNavigationBarCustom({
+    super.key,
+  });
+
+  @override
+  State<BottomNavigationBarCustom> createState() =>
+      _BottomNavigationBarCustomState();
+}
+
+class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
   @override
   Widget build(BuildContext context) {
     final navigationProvider = Provider.of<NavigationProvider>(context);
@@ -46,7 +57,7 @@ class BottomNavigationBarCustom extends StatelessWidget {
             onTap: (index) {
               // Set the index in the provider
               navigationProvider.setIndex(index);
-
+              // navigationProvider.setIndex(index)
               // Perform specific actions based on the index
               switch (index) {
                 case 0: // First icon action
@@ -68,7 +79,7 @@ class BottomNavigationBarCustom extends StatelessWidget {
             selectedItemColor: kprimaryColor,
             unselectedItemColor: Colors.grey,
             type: BottomNavigationBarType.fixed,
-            items: const [
+            items: [
               BottomNavigationBarItem(
                 icon: Icon(CupertinoIcons.group_solid),
                 label: 'المجتمع',
@@ -93,19 +104,15 @@ class BottomNavigationBarCustom extends StatelessWidget {
   }
 
   // Methods for each action
-  void _navigateToCommunity(BuildContext context) {
-    Navigator.pushReplacementNamed(context, AppointmentsPage.id);
-  }
+  void _navigateToCommunity(BuildContext context) => Navigator.push(
+      context, MaterialPageRoute(builder: (context) => Community()));
 
-  void _navigateToPlatform(BuildContext context) {
-    Navigator.pushReplacementNamed(context, AppointmentsPage.id);
-  }
+  void _navigateToPlatform(BuildContext context) =>
+      Navigator.pushReplacementNamed(context, AppointmentsPage.id);
 
-  void _navigateToClasses(BuildContext context) {
-    Navigator.pushReplacementNamed(context, AppointmentsPage.id);
-  }
+  void _navigateToClasses(BuildContext context) =>
+      Navigator.pushReplacementNamed(context, AppointmentsPage.id);
 
-  void _navigateToMeetings(BuildContext context) {
-    Navigator.pushReplacementNamed(context, AppointmentsPage.id);
-  }
+  void _navigateToMeetings(BuildContext context) =>
+      Navigator.pushReplacementNamed(context, AppointmentsPage.id);
 }

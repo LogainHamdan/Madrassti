@@ -1,10 +1,11 @@
+import 'package:finalproject/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../core/util/constants.dart';
 
 class Header extends StatelessWidget {
-  const Header();
+  Header();
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +43,13 @@ class Header extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        const SizedBox(),
+        IconButton(
+          onPressed: () => Navigator.pushReplacementNamed(context, HomePage.id),
+          icon: Icon(
+            Icons.arrow_forward_ios_outlined,
+            color: kprimaryColor,
+          ),
+        ),
       ],
     );
   }

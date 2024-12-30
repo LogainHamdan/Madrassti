@@ -11,6 +11,7 @@ import '../widgets/bottom_navigation.dart';
 import '../widgets/custom_stack.dart';
 import '../widgets/(repeated) navigation_container.dart';
 import 'chats.dart';
+import 'community.dart';
 
 class HomePage extends StatelessWidget {
   static const id = '/home';
@@ -158,7 +159,7 @@ class HomePage extends StatelessWidget {
                         children: [
                           CustomStack(
                             onTap: () => Navigator.pushReplacementNamed(
-                                context, AppointmentsPage.id),
+                                context, Community.id),
                             title: 'المجتمع',
                             imagePath: 'assets/images/community.png',
                           ),
@@ -169,7 +170,7 @@ class HomePage extends StatelessWidget {
                             onTap: () => Navigator.pushReplacementNamed(
                                 context, AppointmentsPage.id),
                             title: 'قاعة الاجتماعات',
-                            imagePath: 'assets/images/meetingRoom.png',
+                            imagePath: 'assets/images/meetings room.png',
                           ),
                           // CustomStack no longer requires parameters
                         ],
@@ -183,7 +184,7 @@ class HomePage extends StatelessWidget {
                           CustomStack(
                             onTap: () => Navigator.pushReplacementNamed(
                                 context, AppointmentsPage.id),
-                            imagePath: 'assets/images/educational_platform.png',
+                            imagePath: 'assets/images/virtual classes.png',
                             title: 'المنصة التعليمية',
                           ),
                           SizedBox(
@@ -199,7 +200,7 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(height: 40.h),
+                    SizedBox(height: 30.h),
                     BottomNavigationBarCustom(),
                   ],
                 ),
