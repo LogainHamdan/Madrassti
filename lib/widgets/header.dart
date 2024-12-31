@@ -44,7 +44,8 @@ class Header extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: () => Navigator.pushReplacementNamed(context, HomePage.id),
+          onPressed: () => Navigator.push(
+              context, MaterialPageRoute(builder: (context) => HomePage())),
           icon: Icon(
             Icons.arrow_forward_ios_outlined,
             color: kprimaryColor,

@@ -15,7 +15,6 @@ import 'community.dart';
 
 class HomePage extends StatelessWidget {
   static const id = '/home';
-
   const HomePage({Key? key}) : super(key: key);
 
   @override
@@ -27,7 +26,7 @@ class HomePage extends StatelessWidget {
         child: MaterialApp(
           home: Scaffold(
             body: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0.sp),
               child: SingleChildScrollView(
                 child: Column(
                   children: [
@@ -104,7 +103,7 @@ class HomePage extends StatelessWidget {
                                     style: TextStyle(
                                       fontFamily: 'rubik',
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 18,
+                                      fontSize: 18.sp,
                                     ),
                                     decoration: InputDecoration(
                                       border: InputBorder.none,
@@ -165,7 +164,7 @@ class HomePage extends StatelessWidget {
                             imagePath: 'assets/images/community.png',
                           ),
                           SizedBox(
-                            width: 8,
+                            width: 8.w,
                           ),
                           CustomStack(
                             bottomPadding: 20,
@@ -174,7 +173,6 @@ class HomePage extends StatelessWidget {
                             title: 'قاعة الاجتماعات',
                             imagePath: 'assets/images/meetings room.png',
                           ),
-                          // CustomStack no longer requires parameters
                         ],
                       ),
                     ),
@@ -191,9 +189,8 @@ class HomePage extends StatelessWidget {
                             title: 'المنصة التعليمية',
                           ),
                           SizedBox(
-                            width: 8,
+                            width: 8.w,
                           ),
-                          // CustomStack no longer requires parameters
                           CustomStack(
                             bottomPadding: 20,
                             onTap: () => Navigator.pushReplacementNamed(
@@ -205,11 +202,11 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 30.h),
-                    BottomNavigationBarCustom(),
                   ],
                 ),
               ),
             ),
+            bottomNavigationBar: BottomNavigationBarCustom(),
           ),
         ),
       ),

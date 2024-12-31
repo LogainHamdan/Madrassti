@@ -37,14 +37,14 @@ class MyMaterialApp extends StatelessWidget {
               bodyMedium: TextStyle(
                 fontFamily: 'rubik',
                 color: const Color(0xff272727),
-                fontSize: 18,
+                fontSize: 18.sp,
               ),
             ),
             appBarTheme: const AppBarTheme(backgroundColor: Color(0xffF7F6FF)),
             scaffoldBackgroundColor: const Color(0xffF7F6FF),
             colorScheme: ColorScheme.fromSeed(seedColor: kprimaryColor),
           ),
-          initialRoute: MeetingsRoomScreen.id,
+          initialRoute: OnboardingScreen.id,
           routes: {
             OnboardingScreen.id: (context) => const OnboardingScreen(),
             AppointmentsPage.id: (context) => const AppointmentsPage(),

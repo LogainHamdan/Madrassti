@@ -1,5 +1,6 @@
 import 'package:finalproject/screens/apointments.dart';
 import 'package:finalproject/screens/community.dart';
+import 'package:finalproject/screens/home.dart';
 import 'package:finalproject/screens/meetings-room.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,6 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
   @override
   Widget build(BuildContext context) {
     final navigationProvider = Provider.of<NavigationProvider>(context);
-
     return ScreenUtilInit(
       child: Container(
         width: MediaQuery.sizeOf(context).width.w,
@@ -30,19 +30,29 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(16.r),
-            topRight: Radius.circular(16.r),
-          ),
+              topLeft: Radius.circular(16.r), topRight: Radius.circular(16.r)),
+          // borderRadius: BorderRadius.only(
+          //   topLeft: Radius.circular(16.r),
+          //   topRight: Radius.circular(16.r),
+          // ),
           boxShadow: [
             BoxShadow(
-              // color: Colors.black.withOpacity(0.2),
-
               color: Colors.black.withOpacity(0.2),
               offset: Offset(0.0, 0.1),
               blurRadius: 8.0.r,
               spreadRadius: 2.0.r,
-            ),
+            )
           ],
+          // boxShadow: [
+          //   BoxShadow(
+          //     // color: Colors.black.withOpacity(0.2),
+          //
+          //     color: Colors.black.withOpacity(0.2),
+          //     offset: Offset(0.0, 0.1),
+          //     blurRadius: 8.0.r,
+          //     spreadRadius: 2.0.r,
+          //   ),
+          // ],
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.only(
@@ -84,21 +94,30 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
             type: BottomNavigationBarType.fixed,
             items: [
               BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.group_solid),
-                label: 'المجتمع',
-              ),
+                  icon: Icon(CupertinoIcons.group_solid), label: 'المجتمع'),
               BottomNavigationBarItem(
-                icon: Icon(Icons.tag_outlined),
-                label: 'المنصة',
-              ),
+                  icon: Icon(Icons.tag_outlined), label: 'المنصة'),
               BottomNavigationBarItem(
-                icon: Icon(Icons.class_outlined),
-                label: 'الصفوف',
-              ),
+                  icon: Icon(Icons.class_outlined), label: 'الصفوف الافتراضية'),
               BottomNavigationBarItem(
-                icon: Icon(Icons.tv),
-                label: 'الاجتماعات',
-              ),
+                  icon: Icon(Icons.tv), label: 'الاجتماعات'),
+
+              // BottomNavigationBarItem(
+              //   icon: Icon(CupertinoIcons.group_solid),
+              //   label: 'المجتمع',
+              // ),
+              // BottomNavigationBarItem(
+              //   icon: Icon(Icons.tag_outlined),
+              //   label: 'المنصة',
+              // ),
+              // BottomNavigationBarItem(
+              //   icon: Icon(Icons.class_outlined),
+              //   label: 'الصفوف',
+              // ),
+              // BottomNavigationBarItem(
+              //   icon: Icon(Icons.tv),
+              //   label: 'الاجتماعات',
+              // ),
             ],
           ),
         ),
@@ -106,17 +125,28 @@ class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
     );
   }
 
-  // Methods for each action
+  // // Methods for each action
+  // void _navigateToCommunity(BuildContext context) => Navigator.push(
+  //     context, MaterialPageRoute(builder: (context) => Community()));
   void _navigateToCommunity(BuildContext context) => Navigator.push(
       context, MaterialPageRoute(builder: (context) => Community()));
 
   void _navigateToPlatform(BuildContext context) =>
       Navigator.pushReplacementNamed(context, AppointmentsPage.id);
 
-  void _navigateToClasses(BuildContext context) =>
-      Navigator.pushReplacementNamed(context, AppointmentsPage.id);
-
   void _navigateToMeetings(BuildContext context) =>
       Navigator.pushReplacementNamed(context, MeetingsRoomScreen.id);
+
+  void _navigateToClasses(BuildContext context) =>
+      Navigator.pushReplacementNamed(context, MeetingsRoomScreen.id);
 }
-// void _navigateToMeetings(BuildContext context)=> Navigator.pushReplacementNamed(context, HomePage.id);}
+//   void _navigateToPlatform(BuildContext context) =>
+//       Navigator.pushReplacementNamed(context, AppointmentsPage.id);
+//
+//   void _navigateToClasses(BuildContext context) =>
+//       Navigator.pushReplacementNamed(context, AppointmentsPage.id);
+//
+//   void _navigateToMeetings(BuildContext context) =>
+//       Navigator.pushReplacementNamed(context, MeetingsRoomScreen.id);
+// }
+// void _navigateToMeetings(BuildContext context)=> Navigator.pushReplacementNamed(context, HomePage.id);}}

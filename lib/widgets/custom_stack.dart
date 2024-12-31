@@ -21,7 +21,7 @@ class CustomStack extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            height: 200.h,
+            height: 170.h,
             width: 150.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20.r),
@@ -43,8 +43,8 @@ class CustomStack extends StatelessWidget {
               children: [
                 Image.asset(
                   imagePath,
-                  height: 120.h,
-                  width: 120.w,
+                  height: 140.h,
+                  width: 140.w,
                   fit: BoxFit.scaleDown,
                 ),
                 Text(
@@ -56,6 +56,7 @@ class CustomStack extends StatelessWidget {
                     fontSize: 16.sp,
                   ),
                 ),
+                //image.asset
               ],
             ),
           ),

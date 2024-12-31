@@ -2,12 +2,10 @@ import 'package:finalproject/core/util/constants.dart';
 import 'package:finalproject/widgets/custom_stack.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'home.dart';
 
 class MeetingsRoomScreen extends StatelessWidget {
   static const id = '/room';
-
   MeetingsRoomScreen({Key? key}) : super(key: key);
 
   @override
