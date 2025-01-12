@@ -1,6 +1,8 @@
+import 'package:finalproject/firebase_options.dart';
 import 'package:finalproject/providers/custom_elevated_button.dart';
 import 'package:finalproject/providers/fields.dart';
 import 'package:finalproject/providers/stack_provider.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -9,7 +11,9 @@ import 'providers/bottom_nav.dart';
 import 'providers/nav_item.dart';
 import 'providers/text_field.dart';
 
-void main() async {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await ScreenUtil.ensureScreenSize();
   runApp(const MyApp());
 }

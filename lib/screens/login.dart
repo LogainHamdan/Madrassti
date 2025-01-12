@@ -12,7 +12,6 @@ import '../widgets/code-container.dart';
 import '../widgets/custom_elevated_button.dart';
 import '../widgets/custom_textform_field.dart';
 import 'home.dart';
-import 'forgot-password.dart';
 
 class Login extends StatefulWidget {
   static const String id = '/login';
@@ -78,6 +77,12 @@ class _LoginState extends State<Login> {
                         );
                       },
                     ),
+                    Consumer<FieldProvider>(
+                        builder: (context, fieldProvider, _) {
+                      return CustomElevatedButton(onPressed: () {
+                        Navigator.pushReplacementNamed(context, HomePage.id);
+                      });
+                    }),
                     SizedBox(
                       height: 16,
                     ),
@@ -92,16 +97,33 @@ class _LoginState extends State<Login> {
                             fontSize: 16,
                           ),
                         )),
+                    GestureDetector(
+                      onTap: () =>
+                          Navigator.pushReplacementNamed(context, HomePage.id),
+                    ),
+                    GestureDetector(
+                      onTap: () =>
+                          Navigator.pushReplacementNamed(context, HomePage.id),
+                    ),
+                    GestureDetector(
+                      onTap: () => Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => HomePage())),
+                    )
                   ],
                 ),
               ),
             ),
           )
         : MultiProvider(
+            // providers: [
+            //   ChangeNotifierProvider(create: (_) => FieldProvider('')),
+            //   ChangeNotifierProvider(
+            //       create: (_) => ButtonProvider('تسجيل الدخول')),
+            // ],
             providers: [
               ChangeNotifierProvider(create: (_) => FieldProvider('')),
               ChangeNotifierProvider(
-                  create: (_) => ButtonProvider('تسجيل الدخول')),
+                  create: (_) => ButtonProvider('تسحيل الدخول'))
             ],
             child: Column(
               children: [
@@ -124,8 +146,20 @@ class _LoginState extends State<Login> {
                       fontSize: 15.sp,
                       fontFamily: 'rubik'),
                 ),
+                Text(
+                  'Enter your username and password',
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16.sp,
+                    fontFamily: 'rubik',
+                  ),
+                ),
                 SizedBox(
                   height: 20.h,
+                ),
+                SizedBox(
+                  height: 18.h,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,

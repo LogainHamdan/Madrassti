@@ -5,22 +5,22 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-
 import '../providers/fields.dart';
 import '../widgets/bottom_navigation.dart';
 import '../widgets/custom_stack.dart';
 import '../widgets/(repeated) navigation_container.dart';
 import 'chats.dart';
 import 'community.dart';
+import 'meetings_room.dart';
 
 class HomePage extends StatelessWidget {
   static const id = '/home';
+
   const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final fieldProvider = context.read<FieldProvider>();
-
     return ScreenUtilInit(
       child: SafeArea(
         child: MaterialApp(
@@ -169,7 +169,7 @@ class HomePage extends StatelessWidget {
                           CustomStack(
                             bottomPadding: 20,
                             onTap: () => Navigator.pushReplacementNamed(
-                                context, AppointmentsPage.id),
+                                context, MeetingsRoom.id),
                             title: 'قاعة الاجتماعات',
                             imagePath: 'assets/images/meetings room.png',
                           ),

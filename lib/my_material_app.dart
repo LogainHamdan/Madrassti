@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'screens/chats.dart';
-import 'screens/forgot-password.dart';
 import 'screens/home.dart';
 import 'screens/onboarding-welcome.dart';
 import 'screens/join.dart';
@@ -52,7 +51,6 @@ class MyMaterialApp extends StatelessWidget {
             JoinScreen.id: (context) => const JoinScreen(),
             Login.id: (context) => const Login(selectedTab: 1),
             Register.id: (context) => const Register(selectedTab: 0),
-            ForgotPassScreen.id: (context) => const ForgotPassScreen(),
             Chats.id: (context) => const Chats(),
             Community.id: (context) => Community(),
             Profile.id: (context) => const Profile(),
