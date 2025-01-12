@@ -1,8 +1,10 @@
 import 'package:finalproject/screens/apointments.dart';
 import 'package:finalproject/screens/community.dart';
 import 'package:finalproject/screens/meetings-room.dart';
+import 'package:finalproject/screens/notifications.dart';
 import 'package:finalproject/screens/profile.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'screens/chats.dart';
@@ -14,7 +16,10 @@ import 'screens/login.dart';
 import 'core/util/constants.dart';
 
 class MyMaterialApp extends StatelessWidget {
-  const MyMaterialApp({super.key});
+  final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
+
+  const MyMaterialApp(
+      {super.key, required this.flutterLocalNotificationsPlugin});
 
   @override
   Widget build(BuildContext context) {
@@ -55,6 +60,10 @@ class MyMaterialApp extends StatelessWidget {
             Community.id: (context) => Community(),
             Profile.id: (context) => const Profile(),
             MeetingsRoomScreen.id: (context) => MeetingsRoomScreen(),
+            NotificationHomePage.id: (context) => NotificationHomePage(
+                  flutterLocalNotificationsPlugin:
+                      flutterLocalNotificationsPlugin,
+                ),
           },
         );
       },
