@@ -1,17 +1,14 @@
-import 'package:finalproject/core/util/constants.dart';
-import 'package:finalproject/data/code.dart';
-import 'package:finalproject/screens/join.dart';
-import 'package:finalproject/screens/register.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+
 import '../providers/custom_elevated_button.dart';
 import '../providers/fields.dart';
 import '../widgets/build-form-fields.dart';
 import '../widgets/code-container.dart';
 import '../widgets/custom_elevated_button.dart';
-import '../widgets/custom_textform_field.dart';
 import 'home.dart';
+import 'join.dart';
 
 class Login extends StatefulWidget {
   static const String id = '/login';
@@ -25,6 +22,8 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   bool isForgotton = false; // Manage the state here
+  late TabController tabController;
+  List<int> getCodeNums = [8, 5, 0, 4];
 
   @override
   Widget build(BuildContext context) {
@@ -35,16 +34,16 @@ class _LoginState extends State<Login> {
             providers: [
               ChangeNotifierProvider(create: (_) => FieldProvider('')),
               ChangeNotifierProvider(
-                  create: (_) => ButtonProvider('تسجيل الدخول')),
+                  create: (_) => ButtonProvider('إنشاء حساب')),
             ],
             child: SingleChildScrollView(
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 80.0),
                 child: Column(
                   children: [
-                    SizedBox(height: 20),
+                    SizedBox(height: 20.h),
                     BuildFormFields(),
-                    SizedBox(height: 8),
+                    SizedBox(height: 20.h),
                     GestureDetector(
                       onTap: () {
                         setState(() {
@@ -56,17 +55,19 @@ class _LoginState extends State<Login> {
                         children: [
                           SizedBox(),
                           Text(
-                            'نسيت كلمة المرور ؟',
+                            'نسيت كلمة المرور؟',
                             style: TextStyle(
-                                color: orangeColor,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w600,
-                                fontFamily: 'rubik'),
+                              color: Colors.deepOrange,
+                              fontSize: 12.sp,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ],
                       ),
                     ),
-                    SizedBox(height: 20.h),
+                    SizedBox(
+                      height: 16.h,
+                    ),
                     Consumer<FieldProvider>(
                       builder: (context, fieldProvider, _) {
                         return CustomElevatedButton(
@@ -77,14 +78,8 @@ class _LoginState extends State<Login> {
                         );
                       },
                     ),
-                    Consumer<FieldProvider>(
-                        builder: (context, fieldProvider, _) {
-                      return CustomElevatedButton(onPressed: () {
-                        Navigator.pushReplacementNamed(context, HomePage.id);
-                      });
-                    }),
                     SizedBox(
-                      height: 16,
+                      height: 16.h,
                     ),
                     GestureDetector(
                         onTap: () => Navigator.pushReplacementNamed(
@@ -92,48 +87,31 @@ class _LoginState extends State<Login> {
                         child: Text(
                           'إنشاء حساب',
                           style: TextStyle(
-                            color: orangeColor,
+                            color: Colors.deepOrange,
                             fontWeight: FontWeight.w600,
                             fontSize: 16,
                           ),
                         )),
-                    GestureDetector(
-                      onTap: () =>
-                          Navigator.pushReplacementNamed(context, HomePage.id),
-                    ),
-                    GestureDetector(
-                      onTap: () =>
-                          Navigator.pushReplacementNamed(context, HomePage.id),
-                    ),
-                    GestureDetector(
-                      onTap: () => Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => HomePage())),
-                    )
                   ],
                 ),
               ),
             ),
           )
         : MultiProvider(
-            // providers: [
-            //   ChangeNotifierProvider(create: (_) => FieldProvider('')),
-            //   ChangeNotifierProvider(
-            //       create: (_) => ButtonProvider('تسجيل الدخول')),
-            // ],
             providers: [
               ChangeNotifierProvider(create: (_) => FieldProvider('')),
               ChangeNotifierProvider(
-                  create: (_) => ButtonProvider('تسحيل الدخول'))
+                  create: (_) => ButtonProvider('تسجيل الدخول'))
             ],
             child: Column(
               children: [
                 Text(
                   'كود التفعيل',
                   style: TextStyle(
-                      fontSize: 26.sp,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black,
-                      fontFamily: 'rubik'),
+                    fontSize: 26.sp,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
                 ),
                 SizedBox(
                   height: 25.h,
@@ -141,18 +119,17 @@ class _LoginState extends State<Login> {
                 Text(
                   'ضع 4 أرقام التي وصلتك على البريد الإلكتروني',
                   style: TextStyle(
-                      color: Colors.grey,
-                      fontWeight: FontWeight.w200,
-                      fontSize: 15.sp,
-                      fontFamily: 'rubik'),
+                    color: Colors.grey,
+                    fontWeight: FontWeight.w200,
+                    fontSize: 15.sp,
+                  ),
                 ),
                 Text(
-                  'Enter your username and password',
+                  'أدخل اسم المستخدم وكلمة المرور',
                   style: TextStyle(
                     color: Colors.grey,
                     fontWeight: FontWeight.bold,
                     fontSize: 16.sp,
-                    fontFamily: 'rubik',
                   ),
                 ),
                 SizedBox(
