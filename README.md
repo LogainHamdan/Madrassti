@@ -1,6 +1,7 @@
 ## Madrassti (مدرستي)
 A Flutter-based app designed to enhance online education for schools. It features virtual classrooms, resource sharing, student performance tracking, and parent-teacher communication tools. Tailored for Arabic-speaking users, it provides an accessible, interactive, and efficient platform for modern learning.
 
+![](https://github.com/LogainHamdan/Madrassti/blob/6e5a37c65a56cfdb5a48a002e42dcf5ee1b0f5c3/Blue%20Modern%20Mobile%20Application%20Presentation%20(5).jpg)
 ![Alt text](https://github.com/LogainHamdan/Madrassti/blob/9cf32556f05181237c5421fff1b2f875e31a842e/Screenshot_2024-12-23-13-52-29-970_com.example.madrassti.jpg)
 ![Alt text](https://github.com/LogainHamdan/Madrassti/blob/9cf32556f05181237c5421fff1b2f875e31a842e/Screenshot_2024-12-23-13-52-45-373_com.example.madrassti.jpg)
 ![Alt text](https://github.com/LogainHamdan/Madrassti/blob/9cf32556f05181237c5421fff1b2f875e31a842e/Screenshot_2024-12-23-13-53-05-000_com.example.madrassti.jpg)
